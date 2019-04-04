@@ -14,7 +14,7 @@ public class testSelectionSort {
 	public void test() {
 		//testPositive();
 		//testNegative();
-		//testMixed();
+		testMixed();
 		testDuplicates();
 	}
 
