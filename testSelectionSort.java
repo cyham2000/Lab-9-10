@@ -12,7 +12,7 @@ import org.junit.Test;
 public class testSelectionSort {
 	@Test
 	public void test() {
-		//testPositive();
+		testPositive();
 		testNegative();
 		//testMixed();
 		//testDuplicates();
