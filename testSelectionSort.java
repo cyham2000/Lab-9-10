@@ -14,8 +14,8 @@ public class testSelectionSort {
 	public void test() {
 		testPositive();
 		testNegative();
-		//testMixed();
-		//testDuplicates();
+		testMixed();
+		testDuplicates();
 	}
 
     public testSelectionSort() {
@@ -74,14 +74,58 @@ public class testSelectionSort {
     }
 
     public void testMixed(){
+			int[] arr = new int[5];
+      arr[0] = -8;
+      arr[1] = 9;
+      arr[2] = 0;
+      arr[3] = -10;
+      arr[4] = 2;
 
-        /** Test data contains with both positive, negative and zeros **/
+      int[] Sortedarr = new int[5];
+      Sortedarr[0] = -10;
+      Sortedarr[1] = -8;
+      Sortedarr[2] = 0;
+      Sortedarr[3] = 2;
+      Sortedarr[4] = 9;
+
+			SelectionSort sortObj = new SelectionSort();
+
+			arr = sortObj.basicSelectionSort(arr);
+
+			// Want to know where it failed
+			for (int index = 0; index < 5; index++)
+			{
+				assertEquals("Array failed at index " + Integer.toString(index), Sortedarr[index], arr[index]);
+			}
     }
 
     public void testDuplicates(){
+			int[] arr = new int[6];
+			arr[0] = -8;
+			arr[1] = 9;
+			arr[2] = 0;
+			arr[3] = -8;
+			arr[4] = 9;
+			arr[5] = 0;
 
-        /** Test data contains duplicates **/
-    }
+			int[] Sortedarr = new int[6];
+			Sortedarr[0] = -8;
+			Sortedarr[1] = -8;
+			Sortedarr[2] = 0;
+			Sortedarr[3] = 0;
+			Sortedarr[4] = 9;
+			Sortedarr[5] = 9;
+
+			SelectionSort sortObj = new SelectionSort();
+
+			arr = sortObj.basicSelectionSort(arr);
+
+			// Want to know where it failed
+			for (int index = 0; index < 6; index++)
+			{
+				assertEquals("Array failed at index " + Integer.toString(index), Sortedarr[index], arr[index]);
+			}
+	}
 
 
 }
